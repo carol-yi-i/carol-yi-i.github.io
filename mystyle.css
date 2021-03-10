@@ -1,7 +1,16 @@
 body{
-    background-color: #030303;
+    background-color: teal;
     font-size: 68px;
 }
 h1{
-    color: blue;
+    font-family: 苹方-简;
+    text-align: center;
+    color: teal;
+}
+div{
+    margin: auto;
+    width: 50%;
+    background-color: white;
+    width: 500px;
+    height: 500px;
 }
