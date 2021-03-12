@@ -1,16 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
 body{
+    margin: 0;
     background-color: teal;
-    font-size: 68px;
+    font-family:“苹方-简”;“微软雅黑”;
+    font-size: 30px;
+    color: whitesmoke;
+}
+a{
+    background-color: transparent;
+}
+img{
+    border-style: none;
 }
 h1{
-    font-family: 苹方-简;
+    font-size: 68px;
     text-align: center;
-    color: teal;
-}
-div{
-    margin: auto;
-    width: 50%;
-    background-color: white;
-    width: 500px;
-    height: 500px;
+    color: violet;
 }
