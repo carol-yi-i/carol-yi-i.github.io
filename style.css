@@ -1,0 +1,29 @@
+#logo{
+    width: 88px; 
+    height: 30px;
+    position: fixed; 
+    left: 240px;
+}
+.left{
+    position: fixed;
+    left: 120px;
+}
+#bt_1{
+    width: 104px;
+    height: 68px;
+    position: fixed;
+    right: 120px;
+}
+#bt_2{
+    width: 200;
+    height: 146px;
+}
+.tab_2{
+    font-size: 18px;
+    position: fixed;
+    right: 304px;
+}
+#d3{
+    position: fixed;
+    top: 1102px;
+}
