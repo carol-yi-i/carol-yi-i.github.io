@@ -3,34 +3,64 @@
 <head>
 <meta charset="utf">
 <title>易菊花</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="mystyle.css">
+<link rel="stylesheet" href="style.css" >
 </head>
 <body>
-    <div class="header" >
-        <img id="logo" src="img/yi1.png" >
-        <h2 style="color: #A29C02; font-size: 18px; position: fixed; right: 502px;">首页</h2>
-        <h2 class="tab_2">关于我</h2>
-        <h2 class="tab_2">项目</h2>
-        <img id="bt_1" src="img/button_1.png" alt="">
-    </div>
-    <div>
+    <ul class="header" >
+        <li id="logo"><img src="img/yi1.png"></li>
+        <li><a href="home" style="color: #A29C02;">首页</a></li>
+        <li><a href="about_me">关于我</a></li>
+        <li><a href="work">项目</a></li>
+        <li><a href="but"><img id="bt_1" src="img/button_1.png" alt="" ></a></li>
+    </ul>
+    <div id="content_1">
         <div class="left">
-            <h1>嗨！我是易菊花</h1>
+            <h1 style="color: #A29C02;">嗨！我是易菊花</h1>
             <h2>欢迎来到我的个人网站</h2>
-            <p>作为一个兴趣多到爆炸但是又能懒到世界末日的设计，意识到是该送自己一个网站了，为了避免总是需要重新整理的作品集…当你看到这个这个网站的时候，请马上联系我吧！</p>
-            <img id="bt_2" src="img/button_2.png" alt="">
+            <p style="width: 352px;">作为一个兴趣多到爆炸但是又能懒到世界末日的设计，意识到是该送自己一个网站了，为了避免总是需要重新整理的作品集…当你看到这个这个网站的时候，请马上联系我吧！</p>
+            <img id="bt_2" src="img/button_2.png" alt="" style=" ">
         </div>
-        <div>
-            <img src="img/ill@2x.png" alt="" style="width: 832px; height: 795px; position: fixed; right: 120px; top: 135px;">
+        <div class="right">
+            <img id="ill" src="img/ill@2x.png" alt="" >
         </div>
     </div>
-    <div>
-        <div class="left" id="d3">
+    <div id="content_2">
+        <div class="left" style="left: 396px;">
             <h1>我的</h1>
             <h1 style="color: #A29C02;">服务方向</h1>
-            <p>主要工作方向是用户界面设计，为了更好的和产品以及开发合作，产品和代码也略懂一些</p>
+            <p>主要工作方向是用户界面设计，为了更好的和产品以及开发合作，产品和开发也略懂一些</p>
             <img id="bt_2" src="img/button_2.png" alt="">
+        </div>
+        <div class="right" style="position: absolute; right: 200px">
+            <div class="cont_1">
+                <img class="cont_i" src="img/chart_8@2x.png" alt="">
+                <h3>设计</h3>
+                <p>工作方向是UI设计，包括web，app，小程序，H5方面的界面设计，图标设计，以及运营方向所需要的banner图及优惠页界面，动效设计及简单的视频剪辑</p>
+                <button>了解更多</button>
+            </div>
+            <div class="cont_2">
+                <img class="cont_i" src="img/bubble_1@2x.png" alt="">
+                <h3>产品</h3>
+                <p>小的研发团队没有产品经理时，曾兼任产品、交互及UI，可以出产思维导图及原型图，具有一定的与产品及运营沟通的能力</p>
+                <button>了解更多</button>
+            </div>
+            <div class="cont_3">
+                <img class="cont_i" src="img/type-1@2x.png" alt="">
+                <h3>研发</h3>
+                <p>进入行业的契机是前端职位，短时间后转职UI，对HTML及css等代码编写较为熟悉，略懂JS，可以出产静态页面及简单交互效果，具有与研发人员的沟通能力</p>
+                <button>了解更多</button>
+            </div>
+        </div>
+    </div>
+    <div id="content_3">
+        <div class="left" style="left: 396px;">
+            <h1>使用的</h1>
+            <h1 style="color: #A29C02;">工具</h1>
+            <p>因使用时间的长短及频率问题有熟练度的区别，但都可以用于工作当中，其中可大致分为Windows和macOS两套生态系统，设计外的工具没有放入此两类之中</p>
+        </div>
+        <div class="right" style="right: 396px;">
+            <img src="img/logo@2x.png" alt="" style="width: 429px; height: 471px;">
         </div>
     </div>
 </body>

@@ -2,31 +2,9 @@
     margin: 0;
     padding: 0;
 }
-html{
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-}
 body{
-    margin: auto;
-    background-color: #ffffff;
-    font-family:“苹方-简”,“黑体-简”;
-    font-size: 30px;
-    color: whitesmoke;
-    width: auto;
+    width: 1200px;
     height: auto;
+    margin: 0 auto;
 }
-a{
-    background-color: transparent;
-}
-img{
-    border-style: none;
-}
-h1,h2,p{
-    color: #393232;
-}
-h1{
-    font-size: 48px;
-}
-h2{
-    font-size: 36px;
-}
+
