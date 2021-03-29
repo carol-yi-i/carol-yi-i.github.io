@@ -6,5 +6,18 @@ body{
     width: 1200px;
     height: auto;
     margin: 0 auto;
+    color: #393232;
 }
-
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 36px;
+}
+h3{
+    font-size: 24px;
+}
+p{
+    font-size: 18px;
+    line-height: 26px;
+}
