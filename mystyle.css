@@ -1,23 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+    display: block;
+}
+
+body {
     width: 1200px;
     height: auto;
     margin: 0 auto;
     color: #393232;
 }
-h1{
+
+h1 {
     font-size: 48px;
 }
-h2{
+
+h2 {
     font-size: 36px;
 }
-h3{
+
+h3 {
     font-size: 24px;
 }
-p{
+
+p {
     font-size: 18px;
     line-height: 26px;
 }

@@ -1,29 +1,211 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf">
-<title>易菊花</title>
-<link rel="stylesheet" href="mystyle.css">
-<link rel="stylesheet" href="style.css" >
+    <meta charset="utf">
+    <title>易菊花</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper.min.css">
+    <!-- 轮播样式 -->
+    <style>
+        .swiper-container {
+            padding-bottom: 40px;
+        }
+        /*  .swiper-wrapper {} */
+        
+        .swiper-slide {
+            width: 800px;
+            height: auto;
+            transition-timing-function: linear;
+        }
+        
+        .swiper-slide>img {
+            width: 800px;
+            height: 600px;
+        }
+        
+        @media only screen and (max-width:1200px) {
+            .swiper-slide {
+                width: 770px;
+            }
+        }
+        
+        @media only screen and (max-width:980px) {
+            .swiper-slide {
+                width: 471px;
+            }
+        }
+        
+        @media only screen and (max-height:480px) {
+            .swiper-slide {
+                width: 471px;
+            }
+        }
+        
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+        
+        .swiper-slide .title {
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: left top;
+            left: -3px;
+            font-size: 11px;
+            color: rgb(102, 102, 102);
+        }
+        
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 86px;
+            height: 112px;
+            background-size: 86px 112px;
+            margin-top: -80px;
+            outline: none;
+        }
+        
+        .swiper-button-next {
+            background-image: url(img/cursor-next.png);
+            margin-right: 120px;
+        }
+        
+        .swiper-button-prev {
+            background-image: url(img/cursor-prev.png);
+            margin-left: 120px;
+        }
+        
+        .swiper-pagination-bullet {
+            background: none;
+            opacity: 1;
+            margin: 0 6px !important;
+            width: 9px;
+            height: 9px;
+            position: relative;
+            outline: none;
+            vertical-align: middle;
+        }
+        
+        .swiper-pagination-bullet span {
+            width: 3px;
+            height: 3px;
+            background: #CCC;
+            display: block;
+            border-radius: 50%;
+            margin-top: 3px;
+            margin-left: 3px;
+        }
+        
+        .swiper-pagination-bullet i {
+            background: #393232;
+            height: 1px;
+            width: 20px;
+            position: absolute;
+            top: 4px;
+            transform: scaleX(0);
+            transform-origin: left;
+            z-index: 3;
+            transition-timing-function: linear;
+        }
+        
+        .swiper-pagination-bullet-active span,
+        .swiper-pagination-bullet:hover span {
+            width: 9px;
+            height: 9px;
+            margin-top: 0;
+            margin-left: 0;
+            background: #393232;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .swiper-pagination-bullet-active i {
+            animation: middle 6s;
+        }
+        
+        .swiper-pagination-bullet:first-child.swiper-pagination-bullet-active i {
+            animation: first 6s;
+        }
+        
+        .swiper-pagination-bullet:last-child.swiper-pagination-bullet-active i {
+            animation: last 6s;
+        }
+        
+        @keyframes first {
+            0% {
+                transform: scaleX(0.5);
+                left: 0px;
+            }
+            /*091*/
+            100% {
+                transform: scaleX(1);
+                left: 2px;
+            }
+            /*0915*/
+        }
+        
+        @keyframes last {
+            0% {
+                transform: scaleX(0.7);
+                left: -10px;
+            }
+            /*1090*/
+            20% {
+                transform: scaleX(0.3);
+                left: 2px;
+            }
+            /*090*/
+            100% {
+                transform: scaleX(0.3);
+                left: 0px;
+            }
+            /*090*/
+        }
+        
+        @keyframes middle {
+            0% {
+                transform: scaleX(0.7);
+                left: -10px;
+            }
+            /*1091*/
+            20% {
+                transform: scaleX(0.45);
+                left: 2px;
+            }
+            /*092*/
+            100% {
+                transform: scaleX(1);
+                left: 2px;
+            }
+            /*0913*/
+        }
+    </style>
 </head>
+
 <body>
     <div id="header">
-        <img src="img/yi1.png">
-        <ul>
-            <li><a href="home" style="color: #A29C02;">首页</a></li>
-            <li><a href="about_me">关于我</a></li>
-            <li><a href="work">项目</a></li>
-        </ul>
+        <div class="head_bg">
+            <img src="img/yi1.png" style="top: 36px; left: 0;">
+            <img src="img/button_1@3x.png" style="width: 104px;height: 72px;top: 30px; right:0;">
+            <ul>
+                <li><a href="home" style="color: #A29C02;">首页</a></li>
+                <li><a href="about_me">关于我</a></li>
+                <li><a href="work">项目</a></li>
+            </ul>
+        </div>
     </div>
     <div id="content_1" class="content">
         <div class="left" style="top: 112px;">
             <h1 style="color: #A29C02;">嗨！我是易菊花</h1>
             <h2>欢迎来到我的个人网站</h2>
-            <p style="width: 352px;">作为一个兴趣多到爆炸但是又能懒到世界末日的设计，意识到是该送自己一个网站了，为了避免总是需要重新整理的作品集…<br>当你看到这个这个网站的时候，请马上联系我吧！</p>
-            <img id="bt_2" src="img/button_2.png" alt="">
+            <p style="width: 352px;">作为一个兴趣多到爆炸但是又能懒到世界末日的设计，意识到是该送自己一个网站了，为了避免总是需要重新整理的作品集…<br>当你看到这个这个网站的时候，请马上联系我吧！
+            </p>
+            <img id="bt_2" src="img/button_2@3x.png" alt="" style="width: 169px;height: 98px;margin-left: 64px;">
         </div>
         <div class="right">
-            <img id="ill" src="img/ill@2x.png" alt="" >
+            <img id="ill" src="img/ill@3x.png" alt="">
         </div>
     </div>
     <div id="content_2" class="content">
@@ -31,30 +213,30 @@
             <h1>我的</h1>
             <h1 style="color: #A29C02;">服务方向</h1>
             <p>主要工作方向是用户界面设计，为了更好的和产品以及开发合作，产品和开发也略懂一些</p>
-            <img id="bt_2" src="img/button_2.png" alt="">
+            <img id="bt_2" src="img/button_3@3x.png" alt="" style="width: 169px;height: 98px;">
         </div>
-        <div class="right" style="position: absolute; right: 98px;width: 776px;height: 896px;float: right;">
+        <div class="right" style="position: absolute; right: 98px;width: 758px;height: 878px;float: right;">
             <div class="cont_1">
-                <img class="cont_i" src="img/chart_8@2x.png" alt="">
+                <img class="cont_i" src="img/chart_8@3x.png" alt="">
                 <h3>设计</h3>
                 <p>工作方向是UI设计，包括web，app，小程序，H5方面的界面设计，图标设计，以及运营方向所需要的banner图及优惠页界面，动效设计及简单的视频剪辑</p>
                 <button>了解更多</button>
             </div>
             <div class="cont_2">
-                <img class="cont_i" src="img/bubble_1@2x.png" alt="">
+                <img class="cont_i" src="img/bubble_1@3x.png" alt="">
                 <h3>产品</h3>
                 <p>小的研发团队没有产品经理时，曾兼任产品、交互及UI，可以出产思维导图及原型图，具有一定的与产品及运营沟通的能力</p>
                 <button>了解更多</button>
             </div>
             <div class="cont_3">
-                <img class="cont_i" src="img/type-2@2x.png" alt="">
+                <img class="cont_i" src="img/type-2@3x.png" alt="">
                 <h3>研发</h3>
                 <p>进入行业的契机是前端职位，短时间后转职UI，对HTML及css等代码编写较为熟悉，略懂JS，可以出产静态页面及简单交互效果，具有与研发人员的沟通能力</p>
                 <button>了解更多</button>
             </div>
         </div>
     </div>
-    <div id="content_3" >
+    <!-- <div id="content_3">
         <div class="left" style="left: 98px; top: 82px;">
             <h1>使用的</h1>
             <h1 style="color: #A29C02;">工具</h1>
@@ -63,16 +245,16 @@
         <div class="right" style="right: 98px;">
             <img src="img/logo@2x.png" alt="" style="width: 429px; height: 471px;">
         </div>
-    </div>
+    </div> -->
     <div id="content_4">
         <div class="left" style="left: 96px;top: 38px;">
-            <img src="img/xm@2x.png" alt="">
+            <img src="img/xm@3x.png" alt="" style="width: 80px;height: 80px;">
             <h3 style="font-size: 30px; margin-top: 24px;">我的工作</h3>
             <p style="margin-top: 12px;">主要工作分为移动端和web两大类，包括有app，小程序，H5，官方网站及to B端后台软件，及少部分运营类宣传页</p>
             <button style="top:252px; left: 0px;">了解更多</button>
         </div>
         <div class="right">
-            <img style="position: absolute; right: 72px;" src="img/椭圆形 + Saly-10@3x 蒙版@2x.png" alt="">
+            <img style="position: absolute; right: 72px;top: -10px; width: 512px;height: 380px;" src="img/saly@3x.png" alt="">
         </div>
     </div>
     <div id="content_5">
@@ -83,27 +265,27 @@
         </div>
         <div id="left_1">
             <div class="ct_1">
-                <img class="cont_m" src="img/chart_2@2x.png" alt="">
+                <img class="cont_m" src="img/chart_2@3x.png" alt="">
                 <h3 class="min_h">界面设计</h3>
                 <p class="min_p">主要工作内容<br>熟练度较高</p>
             </div>
             <div class="ct_2">
-                <img class="cont_m" src="img/chart_1@2x.png" alt="">
+                <img class="cont_m" src="img/chart_1@3x.png" alt="">
                 <h3 class="min_h">原型图</h3>
                 <p class="min_p">辅助工作内容<br>熟练度尚可</p>
             </div>
             <div class="ct_3">
-                <img class="cont_m" src="img/type-1@2x.png" alt="">
+                <img class="cont_m" src="img/type-1@3x.png" alt="">
                 <h3 class="min_h">静态页面</h3>
-                <p class="min_p">前主要工作内容<br>熟练度尚可</p> 
+                <p class="min_p">前主要工作内容<br>熟练度尚可</p>
             </div>
             <div class="ct_4">
-                <img class="cont_m" src="img/clock_2@2x.png" alt="">
+                <img class="cont_m" src="img/clock_2@3x.png" alt="">
                 <h3 class="min_h">动效设计</h3>
                 <p class="min_p">工作中使用不多<br>熟悉</p>
             </div>
             <div class="ct_5">
-                <img class="cont_m" src="img/scissors_2@2x.png" alt="">
+                <img class="cont_m" src="img/scissors_2@3x.png" alt="">
                 <h3 class="min_h">视频剪辑</h3>
                 <p class="min_p">工作使用极少<br>只懂基础</p>
             </div>
@@ -114,11 +296,39 @@
             <h1>项目</h1>
             <p style="margin-top: 24px;">过往项目分为移动端和web两大类，包括有app，小程序，H5，官方网站及to B端后台软件，<br>及少部分运营类宣传页</p>
         </div>
-        <div class="part_2">
-             <img src="img/cr.png" alt=""> 
-             <img src="img/icam365.png" style="position: absolute;margin-left: 30px;" alt="">
+        <div class="swiper-container" style="margin-top: 68px;position: relative;margin-left: calc(-50vw + 50%);margin-right: calc(-50vw + 50%);">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="title">#app _ 超燃型动</div><img data-src="img/cr_app.png" data-srcset="img/cr_app.png" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">#app/web _ iCam365</div><img data-src="img/icam_365.png" data-srcset="img/icam_365.png" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">#h5 _ 超燃型动</div><img data-src="img/cr_h5.png" data-srcset="img/cr_h5.png" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">#app _ Fight减脂</div><img data-src="img/fight.png" data-srcset="img/fight.png" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">#小程序 _ 超燃型动</div><img data-src="img/cr_xcx.png" data-srcset="img/cr_xcx.png" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">#应用宣传 _ Fight</div><img data-src="img/ban.png" data-srcset="img/ban.png" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
+    <script src="swiper.min.js"></script>
     <!-- <div id="content_7">
         <div class="part_1" style="text-align: center;">
             <h1>UI作品</h1>
@@ -131,12 +341,12 @@
     </div> -->
     <div id="content_end">
         <div class="left" style="left: 96px;top: 130px;">
-            <img src="img/paper_plane_2@2x.png" alt="" style="position: absolute; top: -172px;left: -73px;">
+            <img src="img/paper_plane_2@3x.png" alt="" style="position: absolute; top: -172px;left: -73px;width: 263px;height: 157px;">
             <h3 style="font-size: 30px; margin-top: 24px;">联系我吧～</h3>
             <p style="margin-top: 12px;">让我们一起工作，我会尽最大的努力帮助你</p>
         </div>
         <div class="right">
-            <img style="position: absolute; right:138px;top: 152px;" src="img/button_2_1.png" alt="">
+            <img style="position: absolute; right:138px;top: 152px;" src="img/button_4.png" alt="">
         </div>
     </div>
     <div class="me">
@@ -144,8 +354,8 @@
         <p>电话：19174143463</p>
         <p>邮箱：18801377463@163.com</p>
         <p>微信：18801377463</p>
-        <img src="img/qq@2x.png" alt="">
-        <img src="img/weixin@2x.png" alt="" style="margin-left: 60px;">
+        <img src="img/qq@3x.png" alt="">
+        <img src="img/weixin@3x.png" alt="" style="margin-left: 60px;">
     </div>
     <div style="font-size: 18px;font-weight: lighter;color:#393232 ;text-align: center;margin-top: 200px;">
         <p>@ 2020 YIJUHUA. ALL RIGHTS RESERVED</p>
@@ -157,6 +367,48 @@
         <div style="background-color: #393232; left: 25%;"></div>
         <div style="background-color: #A29C02; left: 50%;"></div>
         <div style="background-color: #A5A5A5; left: 75%; border-top-right-radius: 10px;"></div>
-    </div>
+    </div>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            speed: 700,
+            allowTouchMove: false,
+            lazy: {
+                loadPrevNext: true,
+                loadPrevNextAmount: 3,
+            },
+            centeredSlides: true,
+            spaceBetween: 50,
+            slidesOffsetBefore: 40,
+            loop: true,
+            slidesPerView: 'auto',
+            on: {
+                slideChangeTransitionEnd: function() {
+                    this.slides.transition(this.params.autoplay.delay + this.params.speed).transform('translate3d(-60px, 0, 0)');
+                },
+                slideChangeTransitionStart: function() {
+                    this.slides.transition(this.params.speed).transform('translate3d(0, 0, 0)');
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function(index, className) {
+                    return '<div class="' + className + '"><span></span><i></i></div>';
+                },
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        window.onresize = function() {
+            swiper.update();
+        }
+    </script>
 </body>
+
 </html>
