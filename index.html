@@ -2,8 +2,12 @@
 <html>
 
 <head>
-    <meta charset="utf">
+    <meta charset="utf-8">
     <title>易菊花</title>
+    <!--[if lt IE 9]>
+   <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+   <![endif]-->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="swiper.min.css">
@@ -11,6 +15,13 @@
     <style>
         .swiper-container {
             padding-bottom: 40px;
+        }
+        
+        #swiper-container {
+            margin-top: 68px;
+            position: relative;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
         }
         /*  .swiper-wrapper {} */
         
@@ -187,22 +198,22 @@
 <body>
     <div id="header">
         <div class="head_bg">
-            <img src="img/yi1.png" style="top: 36px; left: 0;">
-            <img src="img/button_1@3x.png" style="width: 104px;height: 72px;top: 30px; right:0;">
+            <img id="logo" src="img/yi3.png">
+            <a id="butt_f" href="#content_end"><img id="butt" src="img/button_1@3x.png" width="104" height="72"></a>
             <ul>
-                <li><a href="home" style="color: #A29C02;">首页</a></li>
-                <li><a href="about_me">关于我</a></li>
-                <li><a href="work">项目</a></li>
+                <li><a href="#content_1" class="other_color">首页</a></li>
+                <li><a href="#content_2">关于我</a></li>
+                <li><a href="#content_6">项目</a></li>
             </ul>
         </div>
     </div>
     <div id="content_1" class="content">
         <div class="left" style="top: 112px;">
-            <h1 style="color: #A29C02;">嗨！我是易菊花</h1>
+            <h1 class="other_color">嗨！我是易菊花</h1>
             <h2>欢迎来到我的个人网站</h2>
             <p style="width: 352px;">作为一个兴趣多到爆炸但是又能懒到世界末日的设计，意识到是该送自己一个网站了，为了避免总是需要重新整理的作品集…<br>当你看到这个这个网站的时候，请马上联系我吧！
             </p>
-            <img id="bt_2" src="img/button_2@3x.png" alt="" style="width: 169px;height: 98px;margin-left: 64px;">
+            <a href="#content_2" id="bt_2"><img src="img/button_2@3x.png" width="169px" height="98px"></a>
         </div>
         <div class="right">
             <img id="ill" src="img/ill@3x.png" alt="">
@@ -211,9 +222,9 @@
     <div id="content_2" class="content">
         <div class="left" style="left: 98px; top: 54px;">
             <h1>我的</h1>
-            <h1 style="color: #A29C02;">服务方向</h1>
+            <h1 class="other_color">服务方向</h1>
             <p>主要工作方向是用户界面设计，为了更好的和产品以及开发合作，产品和开发也略懂一些</p>
-            <img id="bt_2" src="img/button_3@3x.png" alt="" style="width: 169px;height: 98px;">
+            <a href="#content_6" id="bt_2"><img src="img/button_3@3x.png" width="169px" height="98px"></a>
         </div>
         <div class="right" style="position: absolute; right: 98px;width: 758px;height: 878px;float: right;">
             <div class="cont_1">
@@ -247,21 +258,21 @@
         </div>
     </div> -->
     <div id="content_4">
-        <div class="left" style="left: 96px;top: 38px;">
-            <img src="img/xm@3x.png" alt="" style="width: 80px;height: 80px;">
-            <h3 style="font-size: 30px; margin-top: 24px;">我的工作</h3>
-            <p style="margin-top: 12px;">主要工作分为移动端和web两大类，包括有app，小程序，H5，官方网站及to B端后台软件，及少部分运营类宣传页</p>
-            <button style="top:252px; left: 0px;">了解更多</button>
+        <div id="my_work" class="left">
+            <img src="img/xm@3x.png" alt="">
+            <h3>我的工作</h3>
+            <p>主要工作分为移动端和web两大类，包括有app，小程序，H5，官方网站及to B端后台软件，及少部分运营类宣传页</p>
+            <button>了解更多</button>
         </div>
-        <div class="right">
-            <img style="position: absolute; right: 72px;top: -10px; width: 512px;height: 380px;" src="img/saly@3x.png" alt="">
+        <div id="work_img" class="right">
+            <img src="img/saly@3x.png" alt="">
         </div>
     </div>
     <div id="content_5">
-        <div class="left" style="left: 98px;">
+        <div class="left" id="skill">
             <h1>拥有的</h1>
-            <h1 style="color: #A29C02; position: absolute;top:0px;left: 146px;">技能</h1>
-            <p style="width: auto;">为了更好的完成工作，兴趣也较为广泛，因此技能点覆盖面比较广，但有了解程度的深浅区别</p>
+            <h1 class="other_color" id="skill_font">技能</h1>
+            <p>为了更好的完成工作，兴趣也较为广泛，因此技能点覆盖面比较广，但有了解程度的深浅区别</p>
         </div>
         <div id="left_1">
             <div class="ct_1">
@@ -291,12 +302,13 @@
             </div>
         </div>
     </div>
-    <div id="content_6">
-        <div class="part_1" style="text-align: center;">
+    <div id="content_6" class="content">
+        <div id="part_1">
             <h1>项目</h1>
-            <p style="margin-top: 24px;">过往项目分为移动端和web两大类，包括有app，小程序，H5，官方网站及to B端后台软件，<br>及少部分运营类宣传页</p>
+            <p>过往项目分为移动端和web两大类，包括有app，小程序，H5，官方网站及to B端后台软件，<br>及少部分运营类宣传页</p>
         </div>
-        <div class="swiper-container" style="margin-top: 68px;position: relative;margin-left: calc(-50vw + 50%);margin-right: calc(-50vw + 50%);">
+        <!-- 轮播 -->
+        <div class="swiper-container" id="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="title">#app _ 超燃型动</div><img data-src="img/cr_app.png" data-srcset="img/cr_app.png" class="swiper-lazy">
@@ -322,6 +334,10 @@
                     <div class="title">#应用宣传 _ Fight</div><img data-src="img/ban.png" data-srcset="img/ban.png" class="swiper-lazy">
                     <div class="swiper-lazy-preloader"></div>
                 </div>
+                <div class="swiper-slide">
+                    <div class="title">#小程序 _ 伊起租</div><img data-src="img/yqz.gif" data-srcset="img/yqz.gif" class="swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                </div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
@@ -340,24 +356,26 @@
         </div>
     </div> -->
     <div id="content_end">
-        <div class="left" style="left: 96px;top: 130px;">
-            <img src="img/paper_plane_2@3x.png" alt="" style="position: absolute; top: -172px;left: -73px;width: 263px;height: 157px;">
-            <h3 style="font-size: 30px; margin-top: 24px;">联系我吧～</h3>
-            <p style="margin-top: 12px;">让我们一起工作，我会尽最大的努力帮助你</p>
+        <div class="left" id="other_font">
+            <img src="img/paper_plane_2@3x.png" alt="">
+            <h3>联系我吧～</h3>
+            <p>让我们一起工作，我会尽最大的努力帮助你</p>
         </div>
-        <div class="right">
-            <img style="position: absolute; right:138px;top: 152px;" src="img/button_4.png" alt="">
-        </div>
+        <a class="right" id="other_i" href="tencent://message/?uin=1822440613&Menu=yes& Service=300&sigT=42a1e5347953b64c5ff3980f8a6e644d4b31456cb0b6ac6b27663a3c4dd0f4aa14a543b1716f9d45">
+            <img src="img/button_4@3x.png" width="200" height="128">
+        </a>
     </div>
     <div class="me">
         <h3>我的联系方式</h3>
         <p>电话：19174143463</p>
         <p>邮箱：18801377463@163.com</p>
         <p>微信：18801377463</p>
-        <img src="img/qq@3x.png" alt="">
-        <img src="img/weixin@3x.png" alt="" style="margin-left: 60px;">
+        <img class="linkman" id="qq" src="img/qq@3x.png" alt="">
+        <img class="linkman" id="weixin" src="img/weixin@3x.png" alt="">
+        <img class="link_qr" id="qq_qr" src="img/qq_qr.png">
+        <img class="link_qr" id="weixin_qr" src="img/weixin_qr.png">
     </div>
-    <div style="font-size: 18px;font-weight: lighter;color:#393232 ;text-align: center;margin-top: 200px;">
+    <div class="footer">
         <p>@ 2020 YIJUHUA. ALL RIGHTS RESERVED</p>
         <!-- <img src="img/yi1.png" style="float: left;margin-top: 0px;"> -->
     </div>
@@ -368,7 +386,9 @@
         <div style="background-color: #A29C02; left: 50%;"></div>
         <div style="background-color: #A5A5A5; left: 75%; border-top-right-radius: 10px;"></div>
     </div>
-    <script>
+    <script src="myscript.js"></script>
+    <!--轮播js -->
+    <!-- <script>
         var swiper = new Swiper('.swiper-container', {
             autoplay: {
                 delay: 5000,
@@ -408,7 +428,7 @@
         window.onresize = function() {
             swiper.update();
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
