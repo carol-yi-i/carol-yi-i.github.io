@@ -1,4 +1,4 @@
-/* 导航点击 */
+/* 导航点击/二维码隐藏显示/按钮抖动*/
 $(document).ready(function() { // ready 事件
     $("li>a").each(function(index) { //便利对象
         $(this).click(function() { //点击触发事件
@@ -6,6 +6,24 @@ $(document).ready(function() { // ready 事件
             $("li>a").eq(index).addClass("other_color"); //添加当前元素的样式
         });
     });
+    $("#qq").hover(function() {
+        $("#qq_qr").fadeToggle(200);
+    }),
+    $("#weixin").hover(function() {
+        $("#weixin_qr").fadeToggle(200);
+    });
+    $("#butt_f").mouseenter(function(){
+        $(this).effect("shake")
+    })
+    $("#bt_2").mouseenter(function(){
+        $(this).effect("shake")
+    })
+    $("#bt_3").mouseenter(function(){
+        $(this).effect("shake")
+    })
+    $("#other_i").mouseenter(function(){
+        $(this).effect("shake")
+    })
 });
 /* 导航栏标题跟随 */
 var $lias = $('li a'), // 导航
@@ -25,17 +43,6 @@ $window.on('scroll', function() {
         }
     }
 });
-/* 隐藏显示 */
-$(document).ready(function() {
-    $("#qq").hover(function() {
-            $("#qq_qr").fadeToggle(300);
-        }),
-        $("#weixin").hover(function() {
-            $("#weixin_qr").fadeToggle(300);
-        });
-
-});
-/* 抖动 */
 
 /* 轮播 */
 var swiper = new Swiper('.swiper-container', {

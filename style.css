@@ -180,9 +180,9 @@ li a:hover {
     top: 118px;
 } */
 
-#skill {
+/* #skill {
     left: 98px;
-}
+} */
 
 #skill>p {
     width: auto;
@@ -196,7 +196,7 @@ li a:hover {
 
 #left_1 {
     position: absolute;
-    left: 98px;
+    /* left: 98px; */
     width: 936px;
     height: 200px;
     float: left;
@@ -226,7 +226,7 @@ li a:hover {
     right: -48px;
 }
 
-#bt_2 {
+.bt_2 {
     position: absolute;
     margin-top: 48px;
 }
