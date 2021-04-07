@@ -71,7 +71,10 @@
             font-size: 11px;
             color: rgb(102, 102, 102);
         }
-        
+        .title>p{
+            font-size: 11px;
+            color: #A29C02;
+        }
         .swiper-button-next,
         .swiper-button-prev {
             width: 86px;
@@ -318,15 +321,15 @@
                     <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="title">#app/web _ iCam365</div><img data-src="img/icam_365.png" data-srcset="img/icam_365.png" class="swiper-lazy">
+                    <div class="title">#app/web _ iCam365 <p>[已上线]</p></div><img data-src="img/icam_365.png" data-srcset="img/icam_365.png" class="swiper-lazy">
                     <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="title">#h5 _ 超燃型动</div><img data-src="img/cr_h5.png" data-srcset="img/cr_h5.png" class="swiper-lazy">
+                    <div class="title">#h5 _ 超燃型动<p>[已上线]</p></div><img data-src="img/cr_h5.png" data-srcset="img/cr_h5.png" class="swiper-lazy">
                     <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="title">#app _ Fight减脂</div><img data-src="img/fight.png" data-srcset="img/fight.png" class="swiper-lazy">
+                    <div class="title">#app _ Fight减脂<p>[已上线]</p></div><img data-src="img/fight.png" data-srcset="img/fight.png" class="swiper-lazy">
                     <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="swiper-slide">
@@ -338,7 +341,7 @@
                     <div class="swiper-lazy-preloader"></div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="title">#小程序 _ 伊起租</div><img data-src="img/yqz.gif" data-srcset="img/yqz.gif" class="swiper-lazy">
+                    <div class="title">#小程序 _ 伊起租<p>[已上线]</p></div><img data-src="img/yqz.gif" data-srcset="img/yqz.gif" class="swiper-lazy">
                     <div class="swiper-lazy-preloader"></div>
                 </div>
             </div>
@@ -390,48 +393,7 @@
         <div style="background-color: #A5A5A5; left: 75%; border-top-right-radius: 10px;"></div>
     </div>
     <script src="myscript.js"></script>
-    <!--轮播js -->
-    <!-- <script>
-        var swiper = new Swiper('.swiper-container', {
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            speed: 700,
-            allowTouchMove: false,
-            lazy: {
-                loadPrevNext: true,
-                loadPrevNextAmount: 3,
-            },
-            centeredSlides: true,
-            spaceBetween: 50,
-            slidesOffsetBefore: 40,
-            loop: true,
-            slidesPerView: 'auto',
-            on: {
-                slideChangeTransitionEnd: function() {
-                    this.slides.transition(this.params.autoplay.delay + this.params.speed).transform('translate3d(-60px, 0, 0)');
-                },
-                slideChangeTransitionStart: function() {
-                    this.slides.transition(this.params.speed).transform('translate3d(0, 0, 0)');
-                },
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                renderBullet: function(index, className) {
-                    return '<div class="' + className + '"><span></span><i></i></div>';
-                },
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-        window.onresize = function() {
-            swiper.update();
-        }
-    </script> -->
+    
 </body>
 
 </html>
