@@ -37,3 +37,148 @@ p {
     font-size: 18px;
     line-height: 26px;
 }
+
+#header {
+    /* background-color: rgba(255, 255, 255, 1); */
+    width: 100%;
+    height: 108px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    line-height: 108px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: hsla(0, 0%, 100%, .80) border-box;
+    overflow: hidden;
+}
+
+
+/* 若浏览器支持 backdrop-filter，则透明度为 68%，并启用毛玻璃 */
+
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    #header {
+        background: hsla(0, 0%, 100%, .68);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        color: #eee;
+    }
+}
+
+
+/* 若浏览器器不支持，则使用 MaterialDesign 的风格 */
+
+@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+    #header {
+        background: #fff;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, .18), 0px 6px 10px rgba(0, 0, 0, .22);
+    }
+}
+
+.head_bg {
+    width: 1200px;
+    height: 108px;
+    position: relative;
+    top: 0%;
+    align-self: center;
+    background-image: url(img/bg_tb.png);
+}
+
+
+/* #header::after {
+    background-color: rgba(255, 255, 255, 0.9);
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    -o-filter: blur(10px);
+} */
+
+
+/* #header img {
+    position: absolute;
+    margin: 0;
+} */
+
+#logo {
+    position: absolute;
+    margin: 0;
+    top: 36px;
+    left: 0;
+    width: 88px;
+    height: 30px;
+}
+
+#butt_f {
+    width: 104px;
+    height: 72px;
+    float: right;
+    position: relative;
+    top: 30px;
+    z-index: 3;
+}
+
+
+/* #butt {
+    position: absolute;
+    width: 104px;
+    height: 72px;
+    right: 0;
+} */
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 720px;
+}
+
+li {
+    float: left;
+    height: 100%;
+}
+
+li img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+li a {
+    display: block;
+    color: #393232;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100%;
+    margin-right: 80px;
+}
+
+
+/*鼠标移动到选项上修改字体 */
+
+li a:hover {
+    color: #A29C02;
+}
+
+.bt_bar {
+    width: 100%;
+    height: 8px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    z-index: 999;
+}
+
+.bt_bar>div {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #FFE6CA;
+}
